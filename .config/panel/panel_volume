@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Written by swapnull
+# This file gets the volume (from and external file) and state and gives us the icon and volume out in echo
+
+source ~/.config/panel/panel_globals
+volume=$(~/.bin/volume level | cut -d' ' -f1 | sed 's/.$//') 
+state=$(~/.bin/volume state)
+
+if [ "$state" = "off" ]; then
+	icon=${VOLUME_OFF_ICON}
+fi
+
+if [ "$state" = "on" ]; then
+	if [ "$volume" -eq 0 ]; then
+		icon=${VOLUME_OFF_ICON}
+	fi
+	if [ "$volume" -lt 40 ]; then
+		icon=${VOLUME_LOW_ICON}
+	fi
+	if [ "$volume" -gt 39 ]; then
+		icon=${VOLUME_HIGH_ICON}
+	fi
+fi
+
+echo $icon $volume	

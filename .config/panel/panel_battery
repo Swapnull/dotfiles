@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#written by swapnull
+#This gets the current battery and echos its icon out of the file. 
+#TODO: colors and have a charging status (maybe cycling the icons?)
+
+source ~/.config/panel/panel_globals
+battery=$(cat /sys/class/power_supply/BAT0/capacity)
+icon=${BATTERY_FULL_ICON}
+
+if [ "$battery" -lt 100 ]; then
+	icon=${BATTERY_FULL_ICON}
+fi 
+
+if [ "$battery" -lt 80 ]; then
+	icon=${BATTERY_THREEQUATER_ICON}
+fi
+
+if [ "$battery" -lt 55 ]; then
+	icon=${BATTERY_HALF_ICON}
+fi
+
+if [ "$battery" -lt 35 ]; then
+	icon=${BATTERY_QUATER_ICON}
+fi
+
+if [ "$battery" -lt 15 ]; then
+	icon=${BATTERY_EMPTY_ICON}
+fi
+
+echo $icon
