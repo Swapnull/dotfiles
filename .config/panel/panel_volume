@@ -4,7 +4,7 @@
 # This file gets the volume (from and external file) and state and gives us the icon and volume out in echo
 
 source ~/.config/panel/panel_globals
-volume=$(~/.bin/volume level | cut -d' ' -f1 | sed 's/.$//') 
+volume=$(~/.bin/volume level | cut -d' ' -f1 |sed 's/.$//') 
 state=$(~/.bin/volume state)
 
 if [ "$state" = "off" ]; then

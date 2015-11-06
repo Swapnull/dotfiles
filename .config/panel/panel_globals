@@ -1,7 +1,7 @@
 export PANEL_FIFO="/tmp/panel-fifo"
 export PANEL_HEIGHT=40
-export PANEL_FONT_FAMILY="-*-terminus-*-*-*-*-18-*-*-*-*-*"
-export ICON_FONT="FontAwesome:size=11"
+export PANEL_FONT_FAMILY="-*-terminus-*-*-*-*-16-*-*-*-*-*"
+export ICON_FONT="FontAwesome:size=14"
 
 
 export BATTERY_EMPTY_ICON=$(echo -e '\uf244')
@@ -9,12 +9,16 @@ export BATTERY_QUATER_ICON=$(echo -e '\uf243')
 export BATTERY_HALF_ICON=$(echo -e '\uf242')
 export BATTERY_THREEQUATER_ICON=$(echo -e '\uf241')
 export BATTERY_FULL_ICON=$(echo -e '\uf240')
+export BATTERY_CHARGING_ICON=$(echo -e '\uf0e7')
 
 export VOLUME_HIGH_ICON=$(echo -e '\uf028')
 export VOLUME_LOW_ICON=$(echo -e '\uf027')
 export VOLUME_OFF_ICON=$(echo -e '\uf026')
 
+
 export CHROME_ICON=$(echo -e '\uf268')
 export CODE_ICON=$(echo -e '\uf121')
 export SPOTIFY_ICON=$(echo -e '\uf1bc')
 export TERMINAL_ICON=$(echo -e '\uf120')
+export RANDOM_ICON=$(echo -e '\uf128')
+export WIFI_ICON=$(echo -e '\uf1eb')

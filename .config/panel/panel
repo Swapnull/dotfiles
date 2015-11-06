@@ -18,9 +18,8 @@ xtitle -sf 'T%s' > "$PANEL_FIFO" &
 clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
 
 while true; do
-	battery_life=$(cat /sys/class/power_supply/BAT0/capacity)
-	echo "B" "$(panel_battery) ${battery_life?}" > "$PANEL_FIFO" &
-	echo "I" " $(iwgetid -r)" > "$PANEL_FIFO" &
+	echo "B" "$(panel_battery)" > "$PANEL_FIFO" &
+	echo "I" "$(panel_wifi)" > "$PANEL_FIFO" &
 	echo "V" "$(panel_volume)" > "$PANEL_FIFO" &
 	sleep 0.5s
 done &

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source ~/.config/panel/panel_globals
+
+icon=${WIFI_ICON}
+network=$(iwgetid -r)
+
+echo $icon $network
