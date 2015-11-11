@@ -82,7 +82,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cls="clear"
 
+#alias's for uni folders
+alias uni="cd ~/uni/"
+alias project="cd ~/uni/project/selfdrivingcar/"
+alias pt="cd ~/uni/pt/"
+alias fp="cd ~/uni/fp/"
+alias cssd="cd ~/uni/cssd"
+alias concurrent="cd ~/uni/cap/"
+alias masters="cd ~/uni/masters"
+ 
 v() {
 	if [ $# -eq 0 ]; then
 		vim .
