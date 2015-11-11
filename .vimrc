@@ -6,6 +6,14 @@ Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/rainbow_parentheses.vim'
+	let g:rainbow#pairs = [['(', ')'], ['[', ']']]
+
+	augroup rainbow_lisp
+		autocmd!
+		autocmd FileType lisp,clojure,scheme RainbowParentheses
+	augroup END
+
 Plug 'scrooloose/nerdtree'
 	nnoremap <F12> :NERDTreeToggle<CR>
 
@@ -19,13 +27,13 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 
 	au FileType python nmap <leader>r :!python main.py<CR>
 
-
+Plug 'tpope/vim-fireplace'
 Plug 'sudar/vim-arduino-syntax'
 	
 call plug#end()
 
 set number
-
+set noswapfile
 set background=dark
 let g:seoul256_background = 236
 colo seoul256
